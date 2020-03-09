@@ -7,18 +7,37 @@ public class Main {
         Animal dog = new Animal("dog");
         dog.name = "Akita";
 
+      Human human = new Human();
+      human.car = new Car("some producer","some brand", "AHSG282653");
+
+
+        dog.feed();
         dog.feed();
 
-        Animal lion = new Animal("dog");
-        lion.name = "leo";
+        dog.takeForAWalk();
+        dog.takeForAWalk();
+        dog.takeForAWalk();
+        dog.takeForAWalk();
+        dog.takeForAWalk();
+        dog.takeForAWalk();
+        dog.takeForAWalk();
+        dog.takeForAWalk();
+        dog.takeForAWalk();
+        dog.takeForAWalk();
+        dog.takeForAWalk();
+        dog.takeForAWalk();
+        dog.takeForAWalk();
+        dog.takeForAWalk();
 
-        lion.feed();
 
-        Human me = new Human();
-        me.fisrtName = "Kacper";
-        me.lastName = "Warda";
-        me.pet = dog;
 
-        me.pet.feed();
+
+
+
+        //garbage collector pozbywa się obiektów, do których nie może się dostać. np: me.pet.myszojeleń.
+        //garbage collector uruchamia się gdy za mało miejsca, bez względu na czas, bez okresów czasowych.
+        // czemu nie uzywać static:
+        //-static to antyobiektowość, nie powinno być innych statycznych metod niz main.
+        //
     }
 }
