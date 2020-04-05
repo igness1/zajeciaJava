@@ -8,8 +8,8 @@ public class Main {
         dog.name = "Akita";
 
       Human human = new Human();
-      human.car = new Car("some producer","some brand", "AHSG282653");
-
+      Car car = new Car("some producer","some brand", "AHSG282653", "someModel");
+      human.setCar(car);
 
         dog.feed();
         dog.feed();
@@ -23,11 +23,7 @@ public class Main {
         dog.takeForAWalk();
         dog.takeForAWalk();
         dog.takeForAWalk();
-        dog.takeForAWalk();
-        dog.takeForAWalk();
-        dog.takeForAWalk();
-        dog.takeForAWalk();
-        dog.takeForAWalk();
+
 
 
 
