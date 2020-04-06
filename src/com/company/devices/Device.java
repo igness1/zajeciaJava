@@ -1,10 +1,12 @@
 package com.company.devices;
 
-public class Device {
+import com.company.Saleable;
+
+public class Device implements Saleable {
     final String producer;
     final String brand;
     final String model;
-    private Double value;
+    private Double value= 2000.0;
 
     public Device(String producer, String brand, String model) {
         this.producer = producer;
@@ -18,5 +20,12 @@ public class Device {
     }
     public String toString(){
         return this.producer + " " + this.model;
+    }
+
+    @Override
+    public void sell() {
+
+        System.out.println("Okey, you sold " + this);
+
     }
 }

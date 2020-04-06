@@ -35,19 +35,7 @@ public class Human extends  Animal{
     public void setSalary(Double salary) {
         this.salary = salary;
     }
-    //dawanie podwyżki, wysyłanie info, sprawdzanie czy podwyżka nie jest ujemna.
-    public void giveRise(double rise){
-        if(rise<0){
-            System.out.println("You can't give a negative rise.");
-        }
-        else{
-            System.out.println("You must collect and sign the annex to the contract.");
-            System.out.println("We send data to the accounting system.");
-            System.out.println("We send updated data to ZUS and US.");
-            this.salary += rise;
 
-        }
-    }
 
     public void setCar(Car car) {
         if (car.getValue() <= this.salary) {
