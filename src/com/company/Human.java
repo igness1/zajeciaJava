@@ -1,10 +1,13 @@
 package com.company;
 
+import com.company.devices.Car;
+import com.company.devices.Phone;
+
 import java.time.ZonedDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Human {
+public class Human extends  Animal{
 
 
     String firstName;
@@ -16,6 +19,11 @@ public class Human {
     List<ZonedDateTime> readingSalaryTime = new ArrayList<ZonedDateTime>();
 
     private Double salary = 200.0;
+
+    public Human() {
+        super("homo-sapiens");
+        this.weight=80.0;
+    }
 
 
     //odczytywanie wypłaty i zapisywanie czasu odczytywania w liście

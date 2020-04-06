@@ -7,7 +7,7 @@ public class Animal {
 
     final String species;
     String name;
-    private Double weight = 2.0D;
+    protected Double weight = 2.0D;
     File pic;
     public static final Double DEFAULT_DOG_WEIGHT = 10.0D;
     public static final Double DEFAULT_LION_WEIGHT = 190.0D;
@@ -15,14 +15,17 @@ public class Animal {
 
     public Animal(String species) {
         this.species = species;
-        if (species == "lion") {
-            this.weight = DEFAULT_LION_WEIGHT;
-        } else if (species == "mouse") {
-            this.weight = DEFAULT_MOUSE_WEIGHT;
-        } else if (species == "dog") {
-            this.weight = DEFAULT_DOG_WEIGHT;
+        switch (species) {
+            case "lion":
+                this.weight = DEFAULT_LION_WEIGHT;
+                break;
+            case "mouse":
+                this.weight = DEFAULT_MOUSE_WEIGHT;
+                break;
+            case "dog":
+                this.weight = DEFAULT_DOG_WEIGHT;
+                break;
         }
-
     }
 
     void feed() {
