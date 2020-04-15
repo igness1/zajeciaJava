@@ -12,5 +12,7 @@ public class Phone extends Device{
         this.isAndroid=isAndroid;
         this.screenSize=screenSize;
     }
+
+
 }
 

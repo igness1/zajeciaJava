@@ -15,6 +15,7 @@ public class Human extends  Animal{
     Animal pet;
     Phone phone;
     private Car car;
+    private Double cash;
 
     List<ZonedDateTime> readingSalaryTime = new ArrayList<ZonedDateTime>();
 

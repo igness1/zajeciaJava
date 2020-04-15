@@ -59,7 +59,7 @@ public class Animal implements Saleable,Edible{
     }
 
     @Override
-    public void sell() throws Exception{
+    public void sell(Human seller, Human buyer, Double price, Double cash) throws Exception{
         if(this instanceof Human){
             throw new Exception("You can't sell human");
 
