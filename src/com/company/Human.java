@@ -18,7 +18,7 @@ public class Human extends  Animal{
     private Double cash;
 
     List<ZonedDateTime> readingSalaryTime = new ArrayList<ZonedDateTime>();
-
+    List<Double> salaryList = new ArrayList<Double>();
     private Double salary = 200.0;
 
     public Human() {
@@ -30,6 +30,14 @@ public class Human extends  Animal{
     //odczytywanie wypłaty i zapisywanie czasu odczytywania w liście
     public Double getSalary(){
         readingSalaryTime.add(ZonedDateTime.now());
+        salaryList.add(salary);
+
+        for(int i=1;i<readingSalaryTime.size();i++){
+            System.out.println("Checking time: "+ readingSalaryTime.get(i)+
+                    " and then salary was: "+ salaryList.get(i)
+            );
+        }
+
         return salary;
     }
 
@@ -37,7 +45,19 @@ public class Human extends  Animal{
         this.salary = salary;
     }
 
+    //dawanie podwyżki, wysyłanie info, sprawdzanie czy podwyżka nie jest ujemna.
+    public void giveRise(double rise){
+        if(rise<0){
+            System.out.println("You can't give a negative rise.");
+        }
+        else{
+            System.out.println("You must collect and sign the annex to the contract.");
+            System.out.println("We send data to the accounting system.");
+            System.out.println("We send updated data to ZUS and US.");
+            this.salary += rise;
 
+        }
+    }
     public void setCar(Car car) {
         if (car.getValue() <= this.salary) {
             System.out.println("Great you can buy it by cash");

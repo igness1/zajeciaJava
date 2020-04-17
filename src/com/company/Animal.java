@@ -73,7 +73,7 @@ public class Animal implements Saleable,Edible{
             throw new Exception("You can't eat human");
 
         }
-        System.out.println("You sold animal");
+        System.out.println("You ate animal");
     }
 }
 
