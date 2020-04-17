@@ -10,19 +10,26 @@ public class Main {
         dog.name = "Akita";
 
       Human human = new Human();
+      Human human1 =new Human();
       Car car = new Car("some producer","some brand", "AHSG282653", "someModel");
+      Car car1 = new Car("some producer","some brand", "AHSG282653", "someModel");
       human.setCar(car);
       human.pet=dog;
 
-      try{
-      human.pet.beEaten();
 
-      human.pet.sell();
-      human.getCar().sell();
-      human.sell();
-    } catch (Exception e) {
+      System.out.println((car).equals(car1));
+      System.out.println(dog);
+      System.out.println(car);
+      System.out.println(car1);
+      human.toString();
+      dog.toString();
+      car.toString();
 
-    }
+
+
+
+
+
 
 
 
