@@ -32,7 +32,7 @@ public class Human extends  Animal{
         readingSalaryTime.add(ZonedDateTime.now());
         salaryList.add(salary);
 
-        for(int i=1;i<readingSalaryTime.size();i++){
+        for(int i=0;i<readingSalaryTime.size();i++){
             System.out.println("Checking time: "+ readingSalaryTime.get(i)+
                     " and then salary was: "+ salaryList.get(i)
             );

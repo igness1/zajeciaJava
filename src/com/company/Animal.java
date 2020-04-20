@@ -1,4 +1,6 @@
 package com.company;
+import com.company.creatures.Pet;
+
 import java.io.File;
 
 
@@ -69,8 +71,8 @@ public class Animal implements Saleable,Edible{
 
     @Override
     public void beEaten() throws Exception{
-        if(this instanceof Human){
-            throw new Exception("You can't eat human");
+        if(this instanceof Pet){
+            throw new Exception("You can't eat pets anymore");
 
         }
         System.out.println("You ate animal");

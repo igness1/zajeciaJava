@@ -16,7 +16,7 @@ public class Device implements Saleable {
         this.model = model;
     }
 
-    public void SetOwner( Human newOwner){
+    public void setOwner( Human newOwner){
         owner = newOwner;
     }
 
@@ -32,9 +32,9 @@ public class Device implements Saleable {
     @Override
     public void sell(Human seller, Human buyer,Double price, Double cash) {
 
-        if(cash>=price){
+        if(cash>=price && seller == owner){
             cash=-price;
-            SetOwner(buyer);
+            setOwner(buyer);
             System.out.println("You bought this, becouse you has enough cash.");
         }
         else{
