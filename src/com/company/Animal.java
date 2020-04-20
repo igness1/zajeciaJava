@@ -4,7 +4,7 @@ import com.company.creatures.Pet;
 import java.io.File;
 
 
-public class Animal implements Saleable,Edible{
+public abstract class Animal implements Saleable,Edible{
 
 
     final String species;
