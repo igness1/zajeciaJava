@@ -86,6 +86,8 @@ public class Human extends Animal {
     }
 
 
-
-
+    @Override
+    public void feed(Double foodWeight) {
+        this.weight += foodWeight/2;
     }
+}

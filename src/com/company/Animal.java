@@ -5,7 +5,7 @@ import com.company.creatures.Pet;
 import java.io.File;
 
 
-public abstract class Animal implements Saleable,Edible{
+public abstract class Animal implements Saleable,Edible, Feedable{
 
 
     final String species;
@@ -15,6 +15,7 @@ public abstract class Animal implements Saleable,Edible{
     public static final Double DEFAULT_DOG_WEIGHT = 10.0D;
     public static final Double DEFAULT_LION_WEIGHT = 190.0D;
     public static final Double DEFAULT_MOUSE_WEIGHT = 0.05D;
+    public static final Double DEFAULT_FOODWEIGHT =10.0;
 
     public Animal(String species) {
         this.species = species;
@@ -30,13 +31,13 @@ public abstract class Animal implements Saleable,Edible{
                 break;
         }
     }
-
-    void feed() {
+    @Override
+    public void feed() {
 
         if (isAlive()== false) {
             System.out.println("Your dog is already dead, impossible to fead.");
         } else {
-            this.weight = this.weight + 1D;
+            this.weight = this.weight + DEFAULT_FOODWEIGHT;
             System.out.println("Your dog is still alive, thx for food, my weight is now " + this.weight);
         }
     }

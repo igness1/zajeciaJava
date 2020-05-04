@@ -7,4 +7,13 @@ public class Pet extends Animal {
         super(species);
 
     }
+
+
+
+    @Override
+    public void feed(Double foodWeight) {
+
+        this.weight += foodWeight;
+    }
+
 }
