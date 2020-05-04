@@ -1,6 +1,6 @@
 package com.company.devices;
 
-public class Car extends Device{
+public abstract class Car extends Device{
 
 
     final String registrationNumber;
@@ -16,6 +16,6 @@ public class Car extends Device{
 
     }
 
-
+    abstract void refuel();
 
 }
