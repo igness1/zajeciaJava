@@ -1,5 +1,7 @@
 package com.company.devices;
 
+import java.net.URL;
+
 public class Phone extends Device{
 
 
@@ -13,6 +15,17 @@ public class Phone extends Device{
         this.screenSize=screenSize;
     }
 
+    public void installAnApp(String appName){
 
+    }
+    public void installAnApp(URL url){
+
+    }
+    public void installAnApp(String appName,Integer version){
+
+    }
+    public void installAnApp(String[] appNames){
+        
+    }
 }
 

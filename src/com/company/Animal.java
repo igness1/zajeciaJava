@@ -1,4 +1,5 @@
 package com.company;
+import com.company.creatures.Human;
 import com.company.creatures.Pet;
 
 import java.io.File;
@@ -75,7 +76,12 @@ public abstract class Animal implements Saleable,Edible{
             throw new Exception("You can't eat pets anymore");
 
         }
-        System.out.println("You ate animal");
+        else
+        {System.out.println("You ate omnomnomn");}
+    }
+
+    public String setName(String name){
+        return this.name=name;
     }
 }
 

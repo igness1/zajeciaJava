@@ -1,4 +1,7 @@
 package com.company;
+
+import com.company.creatures.Human;
+
 public interface Saleable {
-    public void sell(Human seller,Human buyer, Double price, Double cash) throws Exception;
+    public void sell(Human seller, Human buyer, Double price, Double cash) throws Exception;
 }

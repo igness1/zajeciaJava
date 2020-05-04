@@ -1,5 +1,6 @@
-package com.company;
+package com.company.creatures;
 
+import com.company.Animal;
 import com.company.devices.Car;
 import com.company.devices.Phone;
 
@@ -7,12 +8,12 @@ import java.time.ZonedDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Human extends  Animal{
+public class Human extends Animal {
 
 
     String firstName;
     String lastName;
-    Animal pet;
+    Pet pet;
     Phone phone;
     private Car car;
     private Double cash;
@@ -26,6 +27,12 @@ public class Human extends  Animal{
         this.weight=80.0;
     }
 
+    public Pet setPet(Pet pet){
+        return this.pet=pet;
+    }
+    public Pet getPet(){
+        return this.pet;
+    }
 
     //odczytywanie wypłaty i zapisywanie czasu odczytywania w liście
     public Double getSalary(){

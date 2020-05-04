@@ -1,4 +1,5 @@
 package com.company;
+import com.company.creatures.Human;
 import com.company.creatures.Pet;
 import com.company.devices.Car;
 
@@ -6,15 +7,15 @@ public class Main {
 
     public static void main(String[] args) throws Exception {
         // write your code here
-        Animal dog = new Pet("dog");
-        dog.name = "Akita";
+        Pet dog = new Pet("dog");
+        dog.setName("Akita");
 
       Human human = new Human();
       Human human1 =new Human();
       Car car = new Car("some producer","some brand", "AHSG282653", "someModel");
       Car car1 = new Car("some producer","some brand", "AHSG282653", "someModel");
       human.setCar(car);
-      human.pet=dog;
+      human.setPet(dog);
 
 
       System.out.println((car).equals(car1));
