@@ -2,6 +2,8 @@ package com.company;
 import com.company.creatures.Human;
 import com.company.creatures.Pet;
 import com.company.devices.Car;
+import com.company.devices.DieselCar;
+import com.company.devices.ElectricCar;
 
 public class Main {
 
@@ -12,8 +14,8 @@ public class Main {
 
       Human human = new Human();
       Human human1 =new Human();
-      Car car = new Car("some producer","some brand", "AHSG282653", "someModel");
-      Car car1 = new Car("some producer","some brand", "AHSG282653", "someModel");
+      Car car = new ElectricCar("some producer","some brand", "AHSG282653", "someModel");
+      Car car1 = new DieselCar("some producer","some brand", "AHSG282653", "someModel");
       human.setCar(car);
       human.setPet(dog);
 
